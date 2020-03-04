@@ -1,11 +1,13 @@
 buildscript {
     repositories {
+        maven { url "https://maven.google.com" }
+        maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
         jcenter()
-        mavenCentral()
+        mavenLocal()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:+'
-        classpath 'com.google.gms:google-services:4.1.0'
+        classpath 'com.google.gms:google-services:4.2.0'
     }
 }
 repositories {
@@ -13,11 +15,12 @@ repositories {
     maven {
         url "https://maven.google.com"
     }
+    maven { url 'https://dl.bintray.com/kotlin/kotlin-eap' }
 }
 
 dependencies {
     compile 'me.leolin:ShortcutBadger:1.1.4@aar'
-    compile 'com.google.firebase:firebase-auth:+'
+    compile 'com.google.firebase:firebase-auth:16.2.0'
     compile('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
        transitive = true
     }
